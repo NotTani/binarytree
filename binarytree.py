@@ -7,6 +7,9 @@ class BinarySearchTree:
             self.left = left
             self.right = right
 
+        def __repr__(self):
+            return f"Node({self.val}, l={self.left}, r={self.right})"
+
         def getVal(self):
             return self.val
 
@@ -40,6 +43,9 @@ class BinarySearchTree:
 
     def __init__(self):
         self.root = None
+
+    def __repr__(self):
+        return f"Tree({repr(self.root)})"
 
     # Insert something into the tree.
     def insert(self, val)

@@ -56,6 +56,14 @@ class BinarySearchTree:
         def __insert(root, val):
             # TODO: implement this
             pass
+        def __insert(r, v):
+            if r is None:
+                return self.__Node(v)
+
+            if v <= r.val:
+                return self.__Node(r.val, __insert(r.left, v), r.right)
+            else:
+                return self.__Node(r.val, r.left, __insert(r.right, v))
 
         self.root = __insert(self.root, val)
 

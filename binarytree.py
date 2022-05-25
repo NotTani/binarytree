@@ -28,8 +28,15 @@ class BinarySearchTree:
         # This method should iterate over the left side of the tree, then
         # return the val, then iterate over the right side of the tree.
         def __iter__(self):
-            # TODO: implement this.
-            pass
+            if self.left is not None:
+                for i in self.left:
+                    yield i
+
+            yield self.val
+
+            if self.right is not None:
+                for i in self.right:
+                    yield i
 
     def __init__(self):
         self.root = None

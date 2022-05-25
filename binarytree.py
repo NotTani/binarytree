@@ -68,10 +68,11 @@ class BinarySearchTree:
         self.root = __insert(self.root, val)
 
     def __iter__(self):
-        if self.root != None:
+        if self.root is not None:
             return self.root.__iter__()
         else:
             return [].__iter__()
+
 
 def main():
     s = input("Enter a list of numbers, seperated by spaces: ")
@@ -81,8 +82,10 @@ def main():
     for x in lst:
         tree.insert(float(x))
 
-    for x in tree:
-        print(x)
+    print(tree)
+
+    print(list(tree))
+
 
 if __name__ == "__main__":
     main()

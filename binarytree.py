@@ -48,14 +48,11 @@ class BinarySearchTree:
         return f"Tree({repr(self.root)})"
 
     # Insert something into the tree.
-    def insert(self, val)
+    def insert(self, val):
 
         # The __insert function is recursive and is not passed a self
         # parameter. It is static function (not a method of the class) but
         # is hidden inside so users of the class will not know it exists.
-        def __insert(root, val):
-            # TODO: implement this
-            pass
         def __insert(r, v):
             if r is None:
                 return self.__Node(v)

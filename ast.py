@@ -21,7 +21,18 @@ class NumNode:
     def eval(self):
         return self.num
 
+def parse_prefix(inString):
+    """Take a string in prefix notation, e.g. "+ + * 4 5 6 7", and
+    produce an Abstract Syntax Tree representing the expression."""
+
+    tokens = inString.split()
+
+    # TODO: Implement the rest.
+
+    pass
+
 def main():
+    """Construct the AST for the expression (5+4) * 6 + 3"""
     x = NumNode(5)
     y = NumNode(4)
     p = PlusNode(x, y)

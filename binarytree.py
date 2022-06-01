@@ -28,21 +28,34 @@ class BinarySearchTree:
         # This method should iterate over the left side of the tree, then
         # return the val, then iterate over the right side of the tree.
         def __iter__(self):
-            # TODO: implement this.
-            pass
+            if self.left is not None:
+                for i in self.left:
+                    yield i
+
+            yield self.val
+
+            if self.right is not None:
+                for i in self.right:
+                    yield i
+                
 
     def __init__(self):
         self.root = None
 
     # Insert something into the tree.
-    def insert(self, val)
+    def insert(self, val):
 
         # The __insert function is recursive and is not passed a self
         # parameter. It is static function (not a method of the class) but
         # is hidden inside so users of the class will not know it exists.
         def __insert(root, val):
-            # TODO: implement this
-            pass
+            if root is None:
+                return self.__Node(val)
+            else:
+                if val <= root.getVal():
+                    return self.__Node(root.getVal(), __insert(root.left, val), root.right)
+                else:
+                    return self.__Node(root.getVal(), root.left, __insert(root.right, val))
 
         self.root = __insert(self.root, val)
 
